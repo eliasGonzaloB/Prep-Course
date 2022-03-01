@@ -1,0 +1,12 @@
+#divClass > h1 { color:antiquewhite }
+
+#thirdDiv>ul>li>img { width: 400px; }
+
+#thirdDiv {
+                    height: 600px;
+                    width: 50px;
+                    background-color: blue;
+                    padding: 50px;
+                    border-color: black;
+                    
+                }

@@ -1,6 +1,7 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-<table class="hide" width="100%" style='table-layout:fixed;'>
+<p align='left'>
+    <img  src='../logo.png' height='70px'>
+</p>
+<table width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
       <a href="https://airtable.com/shrSzEYT4idEFGB8d?prefill_clase=04-JS-III">
@@ -11,19 +12,14 @@
     </td>
   </tr>
 </table>
-
-# JavaScript III
-
-#### Continuación de bucles ***for*** y ***arrays***
+# Lección 4: Javascript III (continuación de bucles `for` y Arrays)
 
 En esta lección cubriremos:
 
 * Introducción a los arrays
-* Bucles ***for*** con arrays
+* Bucles `for` con arrays
 
-<div class="iframeContainer">
-<iframe src="https://player.vimeo.com/video/424916422?h=c1ea37841e&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="03 - JS III - Arrays"></iframe>
-</div>
+<iframe src="https://player.vimeo.com/video/424916422" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ## Introducción a los arrays (matrices/arreglos)
 
@@ -33,9 +29,9 @@ En la lección anterior discutimos los 3 tipos de datos básicos (cadenas/string
 const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
 ```
 
-### ***.length***
+### .length
 
-Al igual que el tipo de dato _String_ tiene un método incorporado `.length`, también lo hace la matriz. De hecho, la matriz tiene muchos métodos incorporados útiles (los discutiremos en lecciones posteriores). Al igual que la cadena `.length` cuenta los caracteres, la matriz`.length` devolverá el número de elementos en una matriz:
+Al igual que el tipo de dato _String_ tiene un método incorporado `.length`, también lo hace la matriz. De hecho, la matriz tiene muchos métodos incorporados útiles (los discutiremos en lecciones posteriores). Al igual que la cadena `.length` cuenta los caracteres, la matriz` .length` devolverá el número de elementos en una matriz:
 
 ```javascript
 const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
@@ -79,10 +75,9 @@ nombresEstudiantes[0] = 'Jorge';
 
 console.log(nombresEstudiantes);  // ['Jorge', 'Antonio', 'Sara', 'Samuel']
 ```
+### `.push` y `.pop`
 
-### ***.push*** y ***.pop***
-
-Otros dos métodos de matriz incorporados muy útiles son `.push` y `.pop`. Estos métodos se refieren a la adición y eliminación de elementos de la matriz después de su declaración inicial.
+Otros dos métodos de matriz incorporados muy útiles son `.push` y` .pop`. Estos métodos se refieren a la adición y eliminación de elementos de la matriz después de su declaración inicial.
 
 `.push` agrega un elemento al final de la matriz, incrementando su longitud en 1. `.push` devuelve la nueva longitud.
 
@@ -104,9 +99,9 @@ nombresEstudiantes.pop();
 console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara']
 ```
 
-### ***.unshift*** y ***.shift***
+### `.unshift` y `.shift`
 
-`.unshift` y `.shift` son exactamente como `.push` y `.pop`, excepto que operan en el primer elemento de la matriz. `.unshift(item)` colocará un nuevo elemento en la primera posición de la matriz, y `.shift()` eliminará el primer elemento de la matriz.
+`.unshift` y` .shift` son exactamente como `.push` y` .pop`, excepto que operan en el primer elemento de la matriz. `.unshift(item)` colocará un nuevo elemento en la primera posición de la matriz, y `.shift()` eliminará el primer elemento de la matriz.
 
 ```javascript
 const nombresEstudiantes = ['Martin', 'Antonio', 'Sara', 'Samuel'];
@@ -122,9 +117,9 @@ console.log(nombresEstudiantes);  // ['Martin', 'Antonio', 'Sara', 'Samuel']
 
 ### Notas sobre las matrices
 
-Debido a que Javascript no es un lenguaje fuertemente tipado, las matrices tampoco necesitan ser tipadas. Las matrices en Javascript pueden contener múltiples tipos de datos diferentes en la misma matriz.
+Debido a que Javascript no es un lenguaje fuertemente tipado, las matrices tampoco necesitan ser tipadas. Las matrices en Javascript pueden contener múltiples tipos de datos diferentes en la misma matriz
 
-## Utilizando bucles ***for*** en arrays
+## Utilizando bucles `for` en arrays
 
 La mayoría de las veces, los bucles for se utilizan para iterar sobre todos los elementos de una matriz. Usando la técnica de acceso al índice ("index access technique") podemos acceder a cada elemento de la matriz. Para hacer esto, usamos el método `.length` como punto de parada para el ciclo.
 
@@ -141,11 +136,10 @@ for (let i = 0; i < nombresEstudiantes.length; i++) {
 // 'Samuel'
 ```
 
+## Abre la carpeta "homework" y completa la tarea descrita en el archivo README
+[Homework](https://github.com/atralice/Curso.Prep.Henry/tree/master/04-JS-III/homework)
+
 ## Recursos adicionales
 
 * [MDN: Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
 * [MDN: for Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for)
-
-## Homework
-
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/Prep-Course/tree/main/04-JS-III/homework)

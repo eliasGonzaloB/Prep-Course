@@ -1,6 +1,7 @@
-![HenryLogo](https://d31uz8lwfmyn8g.cloudfront.net/Assets/logo-henry-white-lg.png)
-
-<table class="hide" width="100%" style='table-layout:fixed;'>
+<p align='left'>
+    <img  src='../logo.png' height='70px'>
+</p>
+<table width="100%" style='table-layout:fixed;'>
   <tr>
     <td>
       <a href="https://airtable.com/shrSzEYT4idEFGB8d?prefill_clase=06-JS-V">
@@ -11,14 +12,14 @@
     </td>
   </tr>
 </table>
+# Lección 6: Javascript V (Clases y `prototype`)
 
-# JavaScript V
+En esta lección cubriremos:
 
-#### Clases y prototype
+* Clases
+* `prototype`
 
-<div class="iframeContainer">
-<iframe src="https://player.vimeo.com/video/425235994?h=c566b7089f&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="1920" height="1080" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="05 - JS V - Classes"></iframe>
-</div>
+<iframe src="https://player.vimeo.com/video/425235994" width="640" height="564" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
 ## Clases
 
@@ -30,7 +31,7 @@ Si tienes experiencia en un lenguaje orientado a objetos (como Java o C#), proba
 
 En este ejemplo crearemos una clase `Gato`. La convención para las clases consiste en dar un nombre en mayúscula al nombre de todo lo que se pueda instanciar con la palabra clave `new`. Cuando usamos la palabra clave `new`, Javascript hace un gran trabajo detrás de escena para nosotros y crea y devuelve un objeto automáticamente.
 
-```js
+```javascript
 function Gato(nombre) {
     // El nuevo operador crea un objeto, "this"
     this.nombre = nombre;
@@ -47,11 +48,11 @@ console.log(kitty.maullar()); // 'Mi nombre es Kitty ... Meow!'
 
 ```
 
-### ***this*** en las clases
+### `this` en las clases
 
 La palabra clave `this` puede comenzar a volverse muy confusa cuando comenzamos a usarla en clases. En el último ejemplo lo usamos en el método de los maullidos. Una buena regla general si no está seguro de a qué se refiere `this`, es observar dónde se llama el método y el objeto a la izquierda del 'punto'. Ese es el objeto al que se refiere `this`.
 
-## ***Prototype***
+## `prototype`
 
 La creación de funciones es costosa (refiriéndonos a la capacidad de memoria de una computadora) y cada vez que creamos un nuevo objeto de clase con métodos, estamos recreando esos métodos en la memoria. Puede imaginar que si estamos creando miles de objetos de clase a partir de una clase con docenas de métodos, la memoria se acumulará rápidamente (20.000 - 40.000 métodos). Las clases tienen una forma única de establecer un método una vez y dar acceso a cada objeto de esa clase a esos métodos. Esto se llama el `prototype`. Cada clase tiene una propiedad _prototype_, que luego podemos establecer en métodos:
 
@@ -69,7 +70,7 @@ let juan = new Usuario('Juan', 'juan.perez');
 let antonio = new Usuario('Antonio', 'atralice');
 
 console.log(juan.introduccion()); // Mi nombre es Juan, mi usuario de Github es juan.perez.
-console.log(antonio.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
+console.log(riley.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
 
 ```
 
@@ -77,7 +78,7 @@ Los métodos de `prototype` tienen acceso a la palabra clave `this` y, al igual 
 
 Hasta ahora siempre que teníamos que crear un objeto nuevo declarábamos un object literal, pero vamos a ver que hay otros métodos que nos da el prototype de Object para cumplir esa tarea
 
-### Object.create
+##### Object.create
 
 El método `create` de los objetos nos permite crear un nuevo objeto a partir de un prototype especificado.
 
@@ -88,13 +89,13 @@ El método `create` de los objetos nos permite crear un nuevo objeto a partir de
 > obj
 < Object {}
 
-// creo un objeto a partir de un proto de Objeto
+// creo que un objeto a partir de un proto de Objeto
 > var obj = Object.create(Object.prototype)
 // que es lo mismo que crear un objeto vacio literal
 > var obj = {}
 ```
 
-### Object.assign
+##### Object.assign
 
 El método `assign` de los objetos te permite agregar propiedades a un objeto pasado por parámetro
 
@@ -114,7 +115,7 @@ En el paradigma de _Programación Orientada a Objetos_ un tema muy importante es
 
 Cuando hacemos referencia a **Herencia** nos referimos a la capacidad de un constructor de _heredar_ propiedades y métodos de otro constructor, así como un Gato es Mamífero antes que Gato, y hereda sus 'propiedades' (nace, se reproduce y muere).
 
-Cuando hablamos de **Polimorfismo** nos referimos a la capacidad de que objetos distintos puedan responder a un llamado igual de acuerdo a su propia naturaleza.
+Cuando hablamos de **Polimorfismo** nos referimos a la capacidad de que objetos distintos puedan responder a un llamado igual de acuerdo a su propia naturaleza. 
 
 ## Herencia en JavaScript
 
@@ -153,7 +154,7 @@ Ahora todo Alumno de Henry antes de Alumno es una Persona, asique podríamos dec
   }
 ```
 
-### Constructores Anidados
+#### Constructores Anidados
 
 Pero en este caso estaríamos repitiendo código, y si en un futuro quisiera cambiar una propiedad tendría que hacerlo en ambos constructores.
 Descartemos esta opción.
@@ -204,23 +205,10 @@ Vamos a solucionar ese problema agregando al prototipo los métodos de Persona, 
 < 'Soy Franco de Montevideo'
 ```
 
+## Abre la carpeta "homework" y completa la tarea descrita en el archivo README
+[Homework](https://github.com/atralice/Curso.Prep.Henry/tree/master/06-JS-V/homework)
+
 ## Recursos adicionales
 
 * [MDN: Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 * [MDN: Prototype](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/prototype)
-
-## Homework
-
-Completa la tarea descrita en el archivo [README](https://github.com/soyHenry/Prep-Course/tree/main/06-JS-V/homework)
-
-<table class="hide" width="100%" style='table-layout:fixed;'>
-  <tr>
-    <td>
-      <a href="https://airtable.com/shrSzEYT4idEFGB8d?prefill_clase=06-JS-V">
-        <img src="https://static.thenounproject.com/png/204643-200.png" width="100"/>
-        <br>
-        Hacé click acá para dejar tu feedback sobre esta clase.
-      </a>
-    </td>
-  </tr>
-</table>
